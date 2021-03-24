@@ -1,0 +1,32 @@
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: url("img/blue-bleed@4000x3000px.svg"); /*background-image from gradienta.io*/
+    background-size: cover;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  p {
+    font-size: small;
+  }
+  
+  li {
+    list-style: none;
+  }
+  

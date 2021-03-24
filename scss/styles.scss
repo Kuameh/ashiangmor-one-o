@@ -1,0 +1,72 @@
+@charset 'utf-8';
+// https://matthewelsom.com/blog/simple-scss-playbook.html
+//Vendor
+@use "vendor/_vendor-dir";
+
+//Base Styles`
+@use "base/_base-dir";
+
+//Abstracts
+@use "abstracts/_abstracts-dir";
+
+//Components
+@use "components/_components-dir";
+
+//Layout
+@use "layouts/_layouts-dir";
+
+
+  .container {
+    width: 70%;
+    height: 75vh;
+    margin: auto;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 15px 50px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    flex-direction: row;
+  }
+  main { 
+    .left {
+    min-width: 35ch;
+    min-height: 90%;
+    background: rgba(39, 39, 39, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+  }
+  .info p {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-top: 5px;
+  }
+}
+  footer {
+    .social-foot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-direction: row;
+      }
+       p {
+        display: flex;
+        justify-content: center;
+        color: #fefefe25;
+      }
+  } 
