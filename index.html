@@ -3,78 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=111111, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="A.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap"rel="stylesheet"/>
     <title>Home | Ashiangmor</title>
-
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="img/A.png" type="image/png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background: url("img/blue-bleed@4000x3000px.svg"); /*background-image from gradienta.io*/
+        background-size: cover;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 15px 50px;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      p {
+        font-size: small;
+      }
+      li {
+        list-style: none;
+      }
+      .container {
+        width: 70%;
+        height: 75vh;
+        margin: auto;
+      }
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        flex-direction: row;
+      }
+      main .left {
+        min-width: 35ch;
+        min-height: 90%;
+        background: rgba(39, 39, 39, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px 40px;
+      }
+      .info p {
+        font-size: 1.1rem;
+        font-weight: 100;
+        margin-top: 5px;
+      }
+      footer .social-foot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-direction: row;
+      }
+      footer p {
+        display: flex;
+        justify-content: center;
+        color: #fefefe25;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
-        <div>
-          <a href="#" class="logo"
-            ><img src="img/ashiangmor.png" alt="logo"
-          /></a>
+        <div class="logo">
+          <img src="img/ashiangmor.png" style="max-width: 15%" alt="logo" />
         </div>
         <ul>
-          <li>
-            <img src="img/user.png" alt="user" class="user" /><a
-              href="#"
-              class="profile"
-              >Profile</a
-            >
-          </li>
+          <a href="#"><li style="display: flex; justify-content: center; font-weight: 600">
+            <img src="img/user.png" style="width: 20px; margin: 0 10px" />Profile
+          </li></a>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <div class="container hero">
-          <div class="wrapper">
-            <h4 class="anim-typewriter">Hello World</h4>
-            <h4 class="anim-typewriter-name">I'm Ashiangmor</h4>
+      <div class="hero container">
+        <div class="right" style="flex-grow: 1">
+          <h2 style="font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 400; white-space: nowrap;"> Hello World,</h2>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400;">
+            <span>I'm Ashiangmor Caleb.</span>
+          </h3>
+          <p style="margin-top: 10px">
+            A student of University of Ghana, in level 100 offering Bachelor of
+            Science in Mathmatical Science. And here is some basic information
+            about me. I'm a Ghanaian, with hobbies in Cooking, Arts &amp;
+            Science, and Music.
+          </p>
+          <p style="margin-top: 10px">
+            English, Ga, and Twi are the languages I need to get about my
+            everyday activity, but also passionate in to learning and speaking
+            french on the regular. I'll do black any day, and and haven't yet
+            hated any food made with beans.
+          </p>
+        </div>
+        <div class="left" style="display: flex; align-items: enter">
+          <div class="cc" style="width: 100%">
+            <div class="info" style="margin-top: 25px">
+              <h3 style="text-align: center; margin-bottom: 25px; font-size: 1.5rem; font-family: 'Playfair Display';">More Info</h3>
+              <p><span style="font-size: 0.7rem; font-weight: bold">Skills:</span><br />Graphic Designing<br />Web Dev (HTML, CSS, JS)<br />Office Productive Tools (Ms Word, Ms PowerPoint)</p>
+              <p>
+                <span style="font-size: 0.7rem; font-weight: bold">Works With:</span><br />
+                CWFM - The Big Family<br />
+                Attire Square
+              </p>
+            </div>
           </div>
         </div>
-        <div class="social">
-            <a href="https://www.github.com/Kuameh" target="_blank"><img class="github" src="img/github.svg"></img></a>
-            <a href="www.facebook.com/Kuameh" target="_blank"><img class="facbook" src="img/facebook.svg"></img></a>
-            <a href="https://www.instagram.com/__kalypo.oo/" target="_blank"><img class="instagram" src="img/instagram.svg"></img></a>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <h2>Section Two</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            ea placeat eaque amet voluptatum consequatur quibusdam quisquam
-            excepturi, enim tenetur.
-          </p>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <h2>Section Two</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            ea placeat eaque amet voluptatum consequatur quibusdam quisquam
-            excepturi, enim tenetur.
-          </p>
-        </div>
-        <img src="img/Simple_Torus.svg" alt="Simple_Torus" id="torus">
-      </section>
+      </div>
     </main>
-    <!-- <hr> -->
-    <footer>
-      <div class="container">
-         <div class="social-foot">
-           <a href="https://www.github.com/Kuameh" target="_blank"><img class="github" src="img/github.svg"></img></a>
-           <a href="www.facebook.com/Kuameh" target="_blank"><img class="facbook" src="img/facebook.svg"></img></a>
-           <a href="https://www.instagram.com/__kalypo.oo/" target="_blank"><img class="instagram" src="img/instagram.svg"></img></a>
-          </div>
-          <p><span>&copy;</span> 2021 Ashiangmor <span>&#124;</span> Made with &#10084;</p>
-        </div>
+    <footer style="margin-top: 45px">
+      <div class="social-foot">
+        <a href="https://www.github.com/Kuameh" target="_blank"><img class="github" src="img/iconmonstr-github.svg" style="width: 23px"/></a>
+        <a href="www.facebook.com/Kuameh" target="_blank"><img class="facbook" src="img/facebook.svg"/></a>
+        <a href="https://www.instagram.com/__kalypo.oo/" target="_blank"><img class="instagram" src="img/instagram.svg"/></a>
+      </div>
+      <p><span>&copy; &nbsp;</span> 2021 Ashiangmor<span>&nbsp; &#124; &nbsp;</span> Made with &#10084;</p>
     </footer>
   </body>
 </html>
