@@ -1,0 +1,50 @@
+@media (max-width: 480px) {
+    body {
+        background-size: 100% 1000px;
+    }
+
+    .container {
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .anim-typewriter {
+        font-size: 3rem;
+    }
+
+    .anim-p-tag {
+        width: 40ch;
+    }
+
+    .right {
+        width: 18rem;
+        min-width: auto;
+      }
+
+    .left {
+        margin-top: 50px;
+    }
+
+    @keyframes typewriter {
+        0% {
+          width: 0;
+        }
+  
+        99% {
+          border-right: 2px solid rgba(255, 255, 255, 0.75);
+        }
+  
+        100% {
+          width: 270px;
+          border: none;
+        }
+      }
+
+      footer {
+        margin: 45px 0;
+      }
+}

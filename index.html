@@ -1,140 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="A.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap"rel="stylesheet"/>
-    <title>Home | Ashiangmor</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/A.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet" />
+  <title>Home | Ashiangmor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background: url("img/blue-bleed@4000x3000px.svg");
+      /*background-image from gradienta.io*/
+      background-size: cover;
+      background-size: 100% 100vh;
+      background-repeat: no-repeat;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      padding: 15px 0;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    p {
+      font-size: small;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .container {
+      width: 70%;
+      height: 75vh;
+      margin: auto;
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10%;
+      padding: 20px;
+      flex-direction: row;
+    }
+
+    main .left {
+      min-width: 35ch;
+      background: rgba(39, 39, 39, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+    }
+
+    .right {
+      width: 30rem;
+      min-width: 368px;
+    }
+
+    .info p {
+      font-size: 1.1rem;
+      font-weight: 100;
+      margin-top: 5px;
+    }
+
+    .anim-typewriter {
+      font-size: 4rem;
+      font-weight: 400;
+      width: 30rem;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typewriter 4s steps(44) 1s alternate both,
+        blinkTextCursor 500ms steps(44) 11 normal;
+    }
+
+    .anim-typewriter-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      width: 30rem;
+      border: none;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typewriter-name 4s steps(44) 5.1s alternate both,
+        blinkTextCursor 500ms steps(44) 5s 9 normal;
+    }
+
+    .anim-p-tag {
+      transform: translateX(-10px);
+      opacity: 0;
+      animation: p-tag 1.9s linear 10s alternate both;
+    }
+
+    .anim-card {
+      transform: translateY(-50px);
+      opacity: 0;
+      animation: card 1.5s steps(100) 12s alternate both;
+    }
+
+    /* animation */
+
+    @keyframes typewriter {
+      0% {
+        width: 0;
       }
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        color: white;
-        background: url("img/blue-bleed@4000x3000px.svg"); /*background-image from gradienta.io*/
-        background-size: cover;
+
+      99% {
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
       }
-      nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        padding: 15px 50px;
-        margin: 0 auto;
+
+      100% {
+        width: 23rem;
+        border: none;
       }
-      a {
-        text-decoration: none;
-        color: white;
+    }
+
+    @keyframes typewriter-name {
+      0% {
+        width: 0;
+        border: none;
       }
-      p {
-        font-size: small;
+
+      2% {
+        width: 0;
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
       }
-      li {
-        list-style: none;
+
+      99% {
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
       }
-      .container {
-        width: 70%;
-        height: 75vh;
-        margin: auto;
+
+      100% {
+        width: 166px;
+        border: none;
       }
-      .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 200px;
-        flex-direction: row;
+    }
+
+    @keyframes p-tag {
+      50% {
+        transform: translateX(-2px);
+        opacity: .21;
       }
-      main .left {
-        min-width: 35ch;
-        min-height: 90%;
-        background: rgba(39, 39, 39, 0.3);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 30px 40px;
+
+      100% {
+        transform: translateX(0px);
+        opacity: 1;
       }
-      .info p {
-        font-size: 1.1rem;
-        font-weight: 100;
-        margin-top: 5px;
+    }
+
+    @keyframes card {
+      50% {
+        transform: translateY(-25px);
+        opacity: .21;
       }
-      footer .social-foot {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        flex-direction: row;
+
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
       }
-      footer p {
-        display: flex;
-        justify-content: center;
-        color: #fefefe25;
+    }
+
+    @keyframes blinkTextCursor {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img src="img/ashiangmor.png" style="max-width: 15%" alt="logo" />
-        </div>
-        <ul>
-          <a href="#"><li style="display: flex; justify-content: center; font-weight: 600">
+
+      to {
+        /* border: none; */
+        border-right-color: transparent;
+      }
+    }
+
+    footer .social-foot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      flex-direction: row;
+    }
+
+    footer p {
+      display: flex;
+      justify-content: center;
+      color: #fefefe25;
+    }
+  </style>
+  <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="img/ashiangmor.png" style="max-width: 6rem" alt="logo" />
+      </div>
+      <ul>
+        <a href="#">
+          <li style="display: flex; justify-content: center; font-weight: 600">
             <img src="img/user.png" style="width: 20px; margin: 0 10px" />Profile
-          </li></a>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="hero container">
-        <div class="right" style="flex-grow: 1">
-          <h2 style="font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 400; white-space: nowrap;"> Hello World,</h2>
-          <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400;">
-            <span>I'm Ashiangmor Caleb.</span>
-          </h3>
-          <p style="margin-top: 10px">
-            A student of University of Ghana, in level 100 offering Bachelor of
-            Science in Mathmatical Science. And here is some basic information
-            about me. I'm a Ghanaian, with hobbies in Cooking, Arts &amp;
-            Science, and Music.
-          </p>
-          <p style="margin-top: 10px">
-            English, Ga, and Twi are the languages I need to get about my
-            everyday activity, but also passionate in to learning and speaking
-            french on the regular. I'll do black any day, and and haven't yet
-            hated any food made with beans.
-          </p>
-        </div>
-        <div class="left" style="display: flex; align-items: enter">
-          <div class="cc" style="width: 100%">
-            <div class="info" style="margin-top: 25px">
-              <h3 style="text-align: center; margin-bottom: 25px; font-size: 1.5rem; font-family: 'Playfair Display';">More Info</h3>
-              <p><span style="font-size: 0.7rem; font-weight: bold">Skills:</span><br />Graphic Designing<br />Web Dev (HTML, CSS, JS)<br />Office Productive Tools (Ms Word, Ms PowerPoint)</p>
-              <p>
-                <span style="font-size: 0.7rem; font-weight: bold">Works With:</span><br />
-                CWFM - The Big Family<br />
-                Attire Square
-              </p>
-            </div>
+          </li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="hero container">
+      <div class="right">
+        <h2 class="anim-typewriter" style="font-family: 'Playfair Display', serif;">
+          Hello World,</h2>
+        <h3 class="anim-typewriter-name">
+          <span>I'm Ashiangmor Caleb.</span>
+        </h3>
+        <p class="anim-p-tag" style="margin-top: 10px">
+          A student of University of Ghana, in level 100 offering Bachelor of
+          Science in Mathmatical Science. And here is some basic information
+          about me. I'm a Ghanaian, with hobbies in Cooking, Arts &amp;
+          Science, and Music.
+        </p>
+        <p class="anim-p-tag" style="margin-top: 10px">
+          English, Ga, and Twi are the languages I need to get about my
+          everyday activity, but I'm also passionate about learning and speaking
+          french on the regular. I'll do black any day, and and haven't yet
+          hated any food made with beans.
+        </p>
+      </div>
+      <div class="left anim-card" style="display: flex; align-items: center">
+        <div class="cc" style="width: 100%">
+          <div class="info" style="margin-top: 25px">
+            <h3 style="text-align: center; margin-bottom: 25px; font-size: 1.5rem; font-family: 'Playfair Display';">
+              More Info</h3>
+            <p><span style="font-size: 0.7rem; font-weight: bold">Skills:</span><br />Graphic Designing<br />Web Dev
+              (HTML, CSS, JS)<br />Office Productive Tools (Ms Word, Ms PowerPoint)</p>
+            <p>
+              <span style="font-size: 0.7rem; font-weight: bold">Works With:</span><br />
+              CWFM - The Big Family<br />
+              Attire Square
+            </p>
           </div>
         </div>
       </div>
-    </main>
-    <footer style="margin-top: 45px">
-      <div class="social-foot">
-        <a href="https://www.github.com/Kuameh" target="_blank"><img class="github" src="img/iconmonstr-github.svg" style="width: 23px"/></a>
-        <a href="www.facebook.com/Kuameh" target="_blank"><img class="facbook" src="img/facebook.svg"/></a>
-        <a href="https://www.instagram.com/__kalypo.oo/" target="_blank"><img class="instagram" src="img/instagram.svg"/></a>
-      </div>
-      <p><span>&copy; &nbsp;</span> 2021 Ashiangmor<span>&nbsp; &#124; &nbsp;</span> Made with &#10084;</p>
-    </footer>
-  </body>
+    </div>
+  </main>
+  <footer style="margin-top: 45px">
+    <div class="social-foot">
+      <a href="https://www.github.com/Kuameh" target="_blank"><img class="github" src="img/iconmonstr-github.svg"
+          style="width: 23px" /></a>
+      <a href="www.facebook.com/Kuameh" target="_blank"><img class="facbook" src="img/facebook.svg" /></a>
+      <a href="https://www.instagram.com/__kalypo.oo/" target="_blank"><img class="instagram"
+          src="img/instagram.svg" /></a>
+    </div>
+    <p><span>&copy; &nbsp;</span> 2021 Ashiangmor<span>&nbsp; &#124; &nbsp;</span> Made with &#10084;</p>
+  </footer>
+</body>
+
 </html>
