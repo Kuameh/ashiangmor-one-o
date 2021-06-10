@@ -1,6 +1,7 @@
 # ashiangmor
 Portfolio Site
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Kuameh/ashiangmor?style=plastic)
 
 This is my first portfolio site. I made this as a submision for my L100 project work.
 The code may be a little bit unorganized. This was done to cut some few lines of code in my initial submission of the work.
